@@ -1,4 +1,4 @@
-run-dist: clean build #Start clean, build and start
+run: clean build #Clean, build and start
 	./build/install/app/bin/app
 clean:
 	./gradlew clean
@@ -6,4 +6,4 @@ clean:
 build:
 	./gradlew installDist
 
-.PHONY: run-dist
+.PHONY: run

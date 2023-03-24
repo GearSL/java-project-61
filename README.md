@@ -7,3 +7,6 @@
 ### EVEN:
 1. [Example with successfull game result](https://asciinema.org/a/y3pDDZGkcPuzwbByukcxcWIwp);
 2. [Example with fail game result](https://asciinema.org/a/xSZL3ruJeYB2h8d2TSPmeiRMz);
+### CALC:
+1. [![Example with successful game resul](https://asciinema.org/a/ES7NSPcIMIgcReiCtVTwFvM7I.svg)](https://asciinema.org/a/ES7NSPcIMIgcReiCtVTwFvM7I);
+2. [![Example with fail game result](https://asciinema.org/a/zXOrileTRMBejFOHhSv9XPzen.svg)](https://asciinema.org/a/zXOrileTRMBejFOHhSv9XPzen)

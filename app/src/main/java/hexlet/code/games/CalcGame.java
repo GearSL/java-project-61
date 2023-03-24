@@ -1,0 +1,61 @@
+package hexlet.code.games;
+
+import hexlet.code.Game;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class CalcGame implements Game {
+
+    private int operandA;
+    private int operandB;
+    private char operation;
+    private int correctAnswer;
+    private final Scanner scanner = new Scanner(System.in);
+
+    @Override
+    public String getRules() {
+        return "What is the result of the expression?\n";
+    }
+
+    @Override
+    public String generateQuestion() {
+        operandA = generateNumber();
+        operandB = generateNumber();
+        operation = getOperation();
+
+        return String.format("Question: %d %s %d", operandA, operation, operandB);
+    }
+
+    @Override
+    public boolean checkAnswer() {
+        switch (operation){
+            case '+' -> correctAnswer = operandA + operandB;
+            case '-' -> correctAnswer = operandA - operandB;
+            case '*' -> correctAnswer = operandA * operandB;
+            default -> System.out.println("Something get wrong try again later.");
+        }
+        int answer = scanner.nextInt();
+
+        if(answer == correctAnswer) {
+            System.out.println("Correct!");
+            return true;
+        } else {
+            System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.%n", answer, correctAnswer);
+            return false;
+        }
+    }
+
+    private static int generateNumber() {
+        Random random = new Random();
+        return random.nextInt(1, 50);
+    }
+
+    private static char getOperation() {
+        //Метод должен возвращать одну из операций +, -, *
+        char[] operations = {'+', '-', '*'};
+        Random random = new Random();
+        int randomCharId = random.nextInt(0, operations.length - 1);
+        return operations[randomCharId];
+    }
+}
