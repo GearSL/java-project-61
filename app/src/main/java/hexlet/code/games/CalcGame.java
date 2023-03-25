@@ -52,7 +52,6 @@ public class CalcGame implements Game {
     }
 
     private static char getOperation() {
-        //Метод должен возвращать одну из операций +, -, *
         char[] operations = {'+', '-', '*'};
         Random random = new Random();
         int randomCharId = random.nextInt(0, operations.length - 1);
