@@ -12,3 +12,5 @@
 ### GDR:
 1. [![Example with successful game result](https://asciinema.org/a/6WZe7NQaxnP1z7TJCdZEIboEt.svg)](https://asciinema.org/a/6WZe7NQaxnP1z7TJCdZEIboEt)
 2. [![Example with fail game result](https://asciinema.org/a/HnjTr8F9aSQxibfBYg43aW3eb.svg)](https://asciinema.org/a/HnjTr8F9aSQxibfBYg43aW3eb)
+### PROGRESSION:
+1. [![Example with successful game result](https://asciinema.org/a/8s3rIITkSZ5ZswiXr6djvOaUI.svg)](https://asciinema.org/a/8s3rIITkSZ5ZswiXr6djvOaUI)

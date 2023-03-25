@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class GCDGame implements Game {
     private int firstNumber;
     private int secondNumber;
-    private int correctAnswer;
     Scanner scanner = new Scanner(System.in);
     @Override
     public String getRules() {
@@ -24,7 +23,7 @@ public class GCDGame implements Game {
 
     @Override
     public boolean checkAnswer() {
-        correctAnswer = 1;
+        int correctAnswer = 1;
         for (int i = 1; i <= firstNumber && i <= secondNumber; i++) {
             if (firstNumber % i == 0 && secondNumber % i == 0)
                 //storing the variable i in the variable correctAnswer
