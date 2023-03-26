@@ -14,3 +14,5 @@
 2. [![Example with fail game result](https://asciinema.org/a/HnjTr8F9aSQxibfBYg43aW3eb.svg)](https://asciinema.org/a/HnjTr8F9aSQxibfBYg43aW3eb)
 ### PROGRESSION:
 1. [![Example with successful game result](https://asciinema.org/a/8s3rIITkSZ5ZswiXr6djvOaUI.svg)](https://asciinema.org/a/8s3rIITkSZ5ZswiXr6djvOaUI)
+### PRIME:
+1. [![Example with successful game result](https://asciinema.org/a/87AH64gyNAAaSn1ZGl3W2rtBE.svg)](https://asciinema.org/a/87AH64gyNAAaSn1ZGl3W2rtBE)
