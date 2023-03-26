@@ -30,6 +30,7 @@ public class Engine {
             if (checkedResult) {
                 correctAnswers++;
             } else {
+                System.out.printf("Let's try again, %s!\n", userName);
                 return;
             }
 
