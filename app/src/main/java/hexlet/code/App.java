@@ -22,37 +22,37 @@ public class App {
                 6 - Prime
                 0 - Exit""");
 
-        int userSelection = scanner.nextInt();
+        String userSelection = scanner.next();
         Game game;
 
         switch (userSelection) {
-            case 1 -> Cli.greeting();
-            case 2 -> {
+            case "1" -> Cli.greeting();
+            case "2" -> {
                 game = new EvenGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case 3 -> {
+            case "3" -> {
                 game = new CalcGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case 4 -> {
+            case "4" -> {
                 game = new GCDGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case 5 -> {
+            case "5" -> {
                 game = new ProgressionGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case 6 -> {
+            case "6" -> {
                 game = new PrimeGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case 0 -> {
+            case "0" -> {
                 System.out.println("Thank you for your attention!");
                 scanner.close();
             }

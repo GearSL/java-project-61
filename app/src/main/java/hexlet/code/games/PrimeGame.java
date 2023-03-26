@@ -5,7 +5,8 @@ import hexlet.code.Game;
 import java.util.Random;
 import java.util.Scanner;
 
-public class PrimeGame implements Game {
+public final class PrimeGame implements Game {
+    public static final int MAX_NUMBER_GENERATOR = 50;
     Scanner scanner = new Scanner(System.in);
     int generatedNumber;
     @Override
@@ -41,7 +42,7 @@ public class PrimeGame implements Game {
 
     private int generateNumber() {
         Random random = new Random();
-        return random.nextInt(1, 50);
+        return random.nextInt(1, MAX_NUMBER_GENERATOR);
     }
 
     static boolean checkForPrime(int inputNumber) {

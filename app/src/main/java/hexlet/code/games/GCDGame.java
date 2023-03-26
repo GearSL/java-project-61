@@ -5,9 +5,10 @@ import hexlet.code.Game;
 import java.util.Random;
 import java.util.Scanner;
 
-public class GCDGame implements Game {
+public final class GCDGame implements Game {
     private int firstNumber;
     private int secondNumber;
+    public static final int MAX_NUMBER_GENERATOR = 50;
     Scanner scanner = new Scanner(System.in);
     @Override
     public String getRules() {
@@ -43,6 +44,6 @@ public class GCDGame implements Game {
 
     public int generateNumber() {
         Random random = new Random();
-        return random.nextInt(1, 50);
+        return random.nextInt(1, MAX_NUMBER_GENERATOR);
     }
 }

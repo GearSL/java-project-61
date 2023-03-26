@@ -5,7 +5,7 @@ import hexlet.code.Game;
 import java.util.Random;
 import java.util.Scanner;
 
-public class EvenGame implements Game {
+public final class EvenGame implements Game {
     private int generatedNumber;
 
     private final Scanner scanner = new Scanner(System.in);

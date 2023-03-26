@@ -5,12 +5,12 @@ import hexlet.code.Game;
 import java.util.Random;
 import java.util.Scanner;
 
-public class CalcGame implements Game {
-
+public final class CalcGame implements Game {
     private int operandA;
     private int operandB;
     private char operation;
     private final Scanner scanner = new Scanner(System.in);
+    public static final int MAX_NUMBER_GENERATOR = 50;
 
     @Override
     public String getRules() {
@@ -47,7 +47,7 @@ public class CalcGame implements Game {
 
     private static int generateNumber() {
         Random random = new Random();
-        return random.nextInt(1, 50);
+        return random.nextInt(1, MAX_NUMBER_GENERATOR);
     }
 
     private static char getOperation() {

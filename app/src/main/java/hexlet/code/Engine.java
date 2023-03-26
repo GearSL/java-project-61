@@ -2,9 +2,9 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine {
+public final class Engine {
     public static final int NEEDLE_CORRECT_ANSWERS = 3;
-    Game game;
+    private final Game game;
 
     Engine(Game game) {
         this.game = game;
