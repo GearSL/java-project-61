@@ -10,7 +10,6 @@ public class CalcGame implements Game {
     private int operandA;
     private int operandB;
     private char operation;
-    private int correctAnswer;
     private final Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -29,15 +28,15 @@ public class CalcGame implements Game {
 
     @Override
     public boolean checkAnswer() {
-        switch (operation){
-            case '+' -> correctAnswer = operandA + operandB;
-            case '-' -> correctAnswer = operandA - operandB;
-            case '*' -> correctAnswer = operandA * operandB;
-            default -> System.out.println("Something get wrong try again later.");
-        }
+        int correctAnswer = switch (operation) {
+            case '+' -> operandA + operandB;
+            case '-' -> operandA - operandB;
+            case '*' -> operandA * operandB;
+            default -> throw new IllegalStateException("Unexpected value: " + operation);
+        };
         int answer = scanner.nextInt();
 
-        if(answer == correctAnswer) {
+        if (answer == correctAnswer) {
             System.out.println("Correct!");
             return true;
         } else {

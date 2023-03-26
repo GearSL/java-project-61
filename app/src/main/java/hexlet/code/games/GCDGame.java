@@ -25,14 +25,14 @@ public class GCDGame implements Game {
     public boolean checkAnswer() {
         int correctAnswer = 1;
         for (int i = 1; i <= firstNumber && i <= secondNumber; i++) {
-            if (firstNumber % i == 0 && secondNumber % i == 0)
-                //storing the variable i in the variable correctAnswer
+            if (firstNumber % i == 0 && secondNumber % i == 0) {
                 correctAnswer = i;
+            }
         }
 
         int answer = scanner.nextInt();
 
-        if(answer == correctAnswer) {
+        if (answer == correctAnswer) {
             System.out.println("Correct!");
             return true;
         } else {
