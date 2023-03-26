@@ -10,7 +10,7 @@ public class PrimeGame implements Game {
     int generatedNumber;
     @Override
     public String getRules() {
-        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.\n";
+        return "Answer 'yes' if given number is prime. Otherwise answer 'no'\n";
     }
 
     @Override
