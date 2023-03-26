@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public final class PrimeGame implements Game {
     public static final int MAX_NUMBER_GENERATOR = 50;
-    Scanner scanner = new Scanner(System.in);
-    int generatedNumber;
+    private final Scanner scanner = new Scanner(System.in);
+    private int generatedNumber;
     @Override
     public String getRules() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.\n";

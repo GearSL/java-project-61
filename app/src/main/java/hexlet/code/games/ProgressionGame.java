@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public final class ProgressionGame implements Game {
-    int correctAnswer;
+    private int correctAnswer;
     public static final int PROGRESSION_LENGTH = 10;
     public static final int PROGRESSION_MAX_RATE = 10;
     @Override

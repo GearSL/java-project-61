@@ -9,7 +9,7 @@ public final class GCDGame implements Game {
     private int firstNumber;
     private int secondNumber;
     public static final int MAX_NUMBER_GENERATOR = 50;
-    Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
     @Override
     public String getRules() {
         return "Find the greatest common divisor of given numbers.\n";

@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public final class EvenGame implements Game {
     private int generatedNumber;
-
+    public static final int MAX_NUMBER_GENERATOR = 50;
     private final Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -45,6 +45,6 @@ public final class EvenGame implements Game {
 
     private static int generateNumber() {
         Random random = new Random();
-        return random.nextInt(1, 50);
+        return random.nextInt(1, MAX_NUMBER_GENERATOR);
     }
 }

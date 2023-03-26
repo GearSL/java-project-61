@@ -6,8 +6,8 @@ public final class Engine {
     public static final int NEEDLE_CORRECT_ANSWERS = 3;
     private final Game game;
 
-    Engine(Game game) {
-        this.game = game;
+    Engine(Game chosenGame) {
+        this.game = chosenGame;
     }
 
     public void start() {

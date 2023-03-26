@@ -9,6 +9,14 @@ import hexlet.code.games.ProgressionGame;
 import java.util.Scanner;
 
 public class App {
+    public static final int CLI = 1;
+    public static final int EVEN_GAME = 2;
+    public static final int CALC_GAME = 3;
+    public static final int GCD_GAME = 4;
+    public static final int PROGRESSION_GAME = 5;
+    public static final int PRIME_GAME = 6;
+    public static final int EXIT = 0;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -22,37 +30,36 @@ public class App {
                 6 - Prime
                 0 - Exit""");
 
-        String userSelection = scanner.next();
-        Game game;
+        int userSelection = scanner.nextInt();
 
         switch (userSelection) {
-            case "1" -> Cli.greeting();
-            case "2" -> {
-                game = new EvenGame();
+            case CLI -> Cli.greeting();
+            case EVEN_GAME -> {
+                Game game = new EvenGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case "3" -> {
-                game = new CalcGame();
+            case CALC_GAME -> {
+                Game game = new CalcGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case "4" -> {
-                game = new GCDGame();
+            case GCD_GAME -> {
+                Game game = new GCDGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case "5" -> {
-                game = new ProgressionGame();
+            case PROGRESSION_GAME -> {
+                Game game = new ProgressionGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case "6" -> {
-                game = new PrimeGame();
+            case PRIME_GAME -> {
+                Game game = new PrimeGame();
                 Engine engine = new Engine(game);
                 engine.start();
             }
-            case "0" -> {
+            case EXIT -> {
                 System.out.println("Thank you for your attention!");
                 scanner.close();
             }
