@@ -2,41 +2,36 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public final class Engine {
-    public static final int NEEDLE_CORRECT_ANSWERS = 3;
-    private final Game game;
+public class Engine {
+    private static final int QUESTION_INDEX = 0;
+    private static final int ANSWER_INDEX = 1;
+    private static String userName;
+    private static final Scanner scanner = new Scanner(System.in);
+    public static void startGame (String rule, String[][] questions) {
+        //Greet our user and ask his name
+        greet();
+        //Introducing the rules
+        System.out.println(rule);
+        //Starting print questions
+        for (String[] question : questions) {
+            System.out.println(question[QUESTION_INDEX]);
+            String answer = scanner.next();
 
-    Engine(Game chosenGame) {
-        this.game = chosenGame;
-    }
-
-    public void start() {
-        int correctAnswers = 0;
-        boolean checkedResult;
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Welcome to the Brain Games!\nMay I have your name?");
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-
-        System.out.println(game.getRules());
-
-        do {
-            System.out.println(game.generateQuestion());
-
-            checkedResult = game.checkAnswer();
-
-            if (checkedResult) {
-                correctAnswers++;
+            if (answer.equals(question[ANSWER_INDEX])) {
+                System.out.println("Correct!");
             } else {
+                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.%n", answer,
+                        question[ANSWER_INDEX]);
                 System.out.printf("Let's try again, %s!\n", userName);
                 return;
             }
-
-        } while (correctAnswers < NEEDLE_CORRECT_ANSWERS);
-
+        }
         System.out.printf("Congratulations, %s!\n", userName);
     }
 
+    private static void greet() {
+        System.out.println("Welcome to the Brain Games!\nMay I have your name?");
+        userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
+    }
 }

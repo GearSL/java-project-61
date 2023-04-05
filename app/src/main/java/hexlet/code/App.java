@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.CalcGame;
+import hexlet.code.games.CalculatorGame;
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.GCDGame;
 import hexlet.code.games.PrimeGame;
@@ -34,31 +34,11 @@ public class App {
 
         switch (userSelection) {
             case CLI -> Cli.greeting();
-            case EVEN_GAME -> {
-                Game game = new EvenGame();
-                Engine engine = new Engine(game);
-                engine.start();
-            }
-            case CALC_GAME -> {
-                Game game = new CalcGame();
-                Engine engine = new Engine(game);
-                engine.start();
-            }
-            case GCD_GAME -> {
-                Game game = new GCDGame();
-                Engine engine = new Engine(game);
-                engine.start();
-            }
-            case PROGRESSION_GAME -> {
-                Game game = new ProgressionGame();
-                Engine engine = new Engine(game);
-                engine.start();
-            }
-            case PRIME_GAME -> {
-                Game game = new PrimeGame();
-                Engine engine = new Engine(game);
-                engine.start();
-            }
+            case EVEN_GAME -> EvenGame.start();
+            case CALC_GAME -> CalculatorGame.start();
+            case GCD_GAME -> GCDGame.start();
+            case PROGRESSION_GAME -> ProgressionGame.start();
+            case PRIME_GAME -> PrimeGame.start();
             case EXIT -> {
                 System.out.println("Thank you for your attention!");
                 scanner.close();
