@@ -22,7 +22,7 @@ public final class ProgressionGame {
         Random random = new Random();
         String[][] questions = new String[QUESTIONS_COUNT][COLUMNS_COUNT];
 
-        for(int i = 0; i < QUESTIONS_COUNT; i++) {
+        for (int i = 0; i < QUESTIONS_COUNT; i++) {
             int progressionRate = random.nextInt(1, MAX_PROGRESSION_RATE);
             int startingValue = random.nextInt(1, MAX_PROGRESSION_RATE);
             int[] generatedProgression = generateProgression(PROGRESSION_LENGTH, progressionRate, startingValue);

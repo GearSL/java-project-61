@@ -18,7 +18,7 @@ public final class CalculatorGame {
     private static String[][] generateQuestions() {
         String[][] questions = new String[QUESTIONS_COUNT][COLUMNS_COUNT];
 
-        for(int i = 0; i < QUESTIONS_COUNT; i++){
+        for (int i = 0; i < QUESTIONS_COUNT; i++) {
             int operandA = generateNumber();
             int operandB = generateNumber();
             char operation = getOperation();

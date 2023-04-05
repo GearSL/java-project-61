@@ -18,7 +18,7 @@ public final class PrimeGame {
     private static String[][] generateQuestions() {
         String[][] questions = new String[QUESTIONS_COUNT][COLUMNS_COUNT];
 
-        for(int i = 0; i < QUESTIONS_COUNT; i++) {
+        for (int i = 0; i < QUESTIONS_COUNT; i++) {
             int generatedNumber = generateNumber();
             questions[i][QUESTION_INDEX] = "Question: " + generatedNumber;
             questions[i][ANSWER_INDEX] = findAnswer(generatedNumber);

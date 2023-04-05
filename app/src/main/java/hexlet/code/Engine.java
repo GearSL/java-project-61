@@ -6,8 +6,8 @@ public class Engine {
     private static final int QUESTION_INDEX = 0;
     private static final int ANSWER_INDEX = 1;
     private static String userName;
-    private static final Scanner scanner = new Scanner(System.in);
-    public static void startGame (String rule, String[][] questions) {
+    private static final Scanner SCANNER = new Scanner(System.in);
+    public static void startGame(String rule, String[][] questions) {
         //Greet our user and ask his name
         greet();
         //Introducing the rules
@@ -15,7 +15,7 @@ public class Engine {
         //Starting print questions
         for (String[] question : questions) {
             System.out.println(question[QUESTION_INDEX]);
-            String answer = scanner.next();
+            String answer = SCANNER.next();
 
             if (answer.equals(question[ANSWER_INDEX])) {
                 System.out.println("Correct!");
@@ -31,7 +31,7 @@ public class Engine {
 
     private static void greet() {
         System.out.println("Welcome to the Brain Games!\nMay I have your name?");
-        userName = scanner.next();
+        userName = SCANNER.next();
         System.out.println("Hello, " + userName + "!");
     }
 }

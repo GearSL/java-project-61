@@ -19,7 +19,7 @@ public final class EvenGame {
 
     private static String[][] generateQuestions() {
         String[][] questions = new String[QUESTIONS_COUNT][COLUMNS_COUNT];
-        for(int i = 0; i < QUESTIONS_COUNT; i++) {
+        for (int i = 0; i < QUESTIONS_COUNT; i++) {
             int generatedNumber = generateNumber();
             questions[i][QUESTION_INDEX] = "Question: " + generatedNumber;
             questions[i][ANSWER_INDEX] = findAnswer(generatedNumber);
@@ -29,11 +29,11 @@ public final class EvenGame {
 
     private static String findAnswer(int number) {
         String correctAnswer;
-            if (number % 2 == 0) {
-                correctAnswer = "yes";
-            } else {
-                correctAnswer = "no";
-            }
+        if (number % 2 == 0) {
+            correctAnswer = "yes";
+        } else {
+            correctAnswer = "no";
+        }
         return correctAnswer;
     }
 

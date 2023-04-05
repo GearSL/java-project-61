@@ -20,7 +20,7 @@ public final class GCDGame {
     private static String[][] generateQuestions() {
         String[][] questions = new String[QUESTIONS_COUNT][COLUMNS_COUNT];
 
-        for(int i = 0; i < questions.length; i++) {
+        for (int i = 0; i < questions.length; i++) {
             int firstNumber = generateNumber();
             int secondNumber = generateNumber();
             questions[i][QUESTION_INDEX] = String.format("Question: %d %d", firstNumber, secondNumber);
