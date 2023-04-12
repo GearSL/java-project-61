@@ -7,6 +7,7 @@ public class Engine {
     private static final int ANSWER_INDEX = 1;
     private static String userName;
     private static final Scanner SCANNER = new Scanner(System.in);
+
     public static void startGame(String rule, String[][] questions) {
         //Greet our user and ask his name
         greet();

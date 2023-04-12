@@ -21,19 +21,13 @@ public final class PrimeGame {
         for (int i = 0; i < QUESTIONS_COUNT; i++) {
             int generatedNumber = generateNumber();
             questions[i][QUESTION_INDEX] = "Question: " + generatedNumber;
-            questions[i][ANSWER_INDEX] = findAnswer(generatedNumber);
+            questions[i][ANSWER_INDEX] = findAnswer(isPrime(generatedNumber));
         }
         return questions;
     }
 
-    private static String findAnswer(int number) {
-        String correctAnswer;
-        if (checkForPrime(number)) {
-            correctAnswer = "yes";
-        } else {
-            correctAnswer = "no";
-        }
-        return correctAnswer;
+    private static String findAnswer(boolean isPrime) {
+        return isPrime ? "yes" : "no";
     }
 
     private static int generateNumber() {
@@ -41,7 +35,7 @@ public final class PrimeGame {
         return random.nextInt(1, MAX_NUMBER_GENERATOR);
     }
 
-    private static boolean checkForPrime(int inputNumber) {
+    private static boolean isPrime(int inputNumber) {
         boolean isItPrime = true;
 
         if (inputNumber <= 1) {

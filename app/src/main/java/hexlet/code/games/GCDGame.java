@@ -24,19 +24,19 @@ public final class GCDGame {
             int firstNumber = generateNumber();
             int secondNumber = generateNumber();
             questions[i][QUESTION_INDEX] = String.format("Question: %d %d", firstNumber, secondNumber);
-            questions[i][ANSWER_INDEX] = findAnswer(firstNumber, secondNumber);
+            questions[i][ANSWER_INDEX] = Integer.toString(findGCD(firstNumber, secondNumber));
         }
         return questions;
     }
 
-    private static String findAnswer(int firstNumber, int secondNumber) {
+    public static int findGCD(int firstNumber, int secondNumber) {
         int correctAnswer = 1;
         for (int i = 1; i <= firstNumber && i <= secondNumber; i++) {
             if (firstNumber % i == 0 && secondNumber % i == 0) {
                 correctAnswer = i;
             }
         }
-        return Integer.toString(correctAnswer);
+        return correctAnswer;
     }
 
     private static int generateNumber() {

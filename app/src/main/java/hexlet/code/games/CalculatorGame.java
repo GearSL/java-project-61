@@ -10,6 +10,7 @@ public final class CalculatorGame {
     private static final int COLUMNS_COUNT = 2;
     private static final int QUESTION_INDEX = 0;
     private static final int ANSWER_INDEX = 1;
+    private static final char[] operations = {'+', '-', '*'};
 
     public static void start() {
         String[][] questions = generateQuestions();
@@ -45,7 +46,6 @@ public final class CalculatorGame {
     }
 
     private static char getOperation() {
-        char[] operations = {'+', '-', '*'};
         Random random = new Random();
         int randomCharId = random.nextInt(0, operations.length - 1);
         return operations[randomCharId];
