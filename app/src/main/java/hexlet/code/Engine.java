@@ -8,13 +8,13 @@ public class Engine {
     private static String userName;
     private static final Scanner SCANNER = new Scanner(System.in);
 
-    public static void startGame(String rule, String[][] questions) {
+    public static void startGame(String rule, String[][] questionAnswerPairs) {
         //Greet our user and ask his name
         greet();
         //Introducing the rules
         System.out.println(rule);
         //Starting print questions
-        for (String[] question : questions) {
+        for (String[] question : questionAnswerPairs) {
             System.out.println(question[QUESTION_INDEX]);
             String answer = SCANNER.next();
 

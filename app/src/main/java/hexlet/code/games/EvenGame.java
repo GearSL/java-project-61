@@ -22,13 +22,9 @@ public final class EvenGame {
         for (int i = 0; i < QUESTIONS_COUNT; i++) {
             int generatedNumber = generateNumber();
             questions[i][QUESTION_INDEX] = "Question: " + generatedNumber;
-            questions[i][ANSWER_INDEX] = findAnswer(isEven(generatedNumber));
+            questions[i][ANSWER_INDEX] = isEven(generatedNumber) ? "yes" : "no";
         }
         return questions;
-    }
-
-    private static String findAnswer(boolean isEven) {
-        return isEven ? "yes" : "no";
     }
 
     private static boolean isEven(int number) {

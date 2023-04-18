@@ -27,7 +27,7 @@ public final class ProgressionGame {
             int startingValue = random.nextInt(1, MAX_PROGRESSION_RATE);
             int[] generatedProgression = generateProgression(PROGRESSION_LENGTH, progressionRate, startingValue);
             int idxToMask = random.nextInt(0, generatedProgression.length - 1);
-            questions[i][QUESTION_INDEX] = "Question: " + maskProgressionString(generatedProgression, idxToMask);
+            questions[i][QUESTION_INDEX] = "Question: " + maskProgression(generatedProgression, idxToMask);
             questions[i][ANSWER_INDEX] = Integer.toString(generatedProgression[idxToMask]);
         }
         return questions;
@@ -44,16 +44,16 @@ public final class ProgressionGame {
         return progression;
     }
 
-    private static String maskProgressionString(int[] progression, int indexToMask) {
-        StringBuilder stringBuilder = new StringBuilder();
+    private static String maskProgression(int[] progression, int indexToMask) {
+        StringBuilder maskedProgression = new StringBuilder();
         for (int i = 0; i < progression.length - 1; i++) {
             if (i == indexToMask) {
-                stringBuilder.append("..");
+                maskedProgression.append("..");
             } else {
-                stringBuilder.append(progression[i]);
+                maskedProgression.append(progression[i]);
             }
-            stringBuilder.append(" ");
+            maskedProgression.append(" ");
         }
-        return stringBuilder.toString();
+        return maskedProgression.toString();
     }
 }
