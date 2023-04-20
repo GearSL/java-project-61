@@ -2,6 +2,26 @@
 [![Actions Status](https://github.com/GearSL/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/GearSL/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/32a0335e7b393b3406eb/maintainability)](https://codeclimate.com/github/GearSL/java-project-61/maintainability)
 
+# ABOUT:
+"Mind Games" is a Java console application that features 5 different games. 
+Below are some examples of how to launch the app in your IDE:
+```
+# Using Make file:
+make run
+```
+
+or
+
+```
+./gradlew clean
+./gradlew installDist
+./build/install/app/bin/app
+```
+
+Once you've launched the app, you can choose which game to play from the menu. 
+The games include various types of puzzles and challenges to test your skills and mental agility. 
+Give it a try and see how you do!
+
 # EXAMPLES:
 ### EVEN:
 1. [![Example with successful game result](https://asciinema.org/a/y3pDDZGkcPuzwbByukcxcWIwp.svg)](https://asciinema.org/a/y3pDDZGkcPuzwbByukcxcWIwp)

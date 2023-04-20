@@ -39,11 +39,9 @@ public class App {
             case GCD_GAME -> GCDGame.start();
             case PROGRESSION_GAME -> ProgressionGame.start();
             case PRIME_GAME -> PrimeGame.start();
-            case EXIT -> {
-                System.out.println("Thank you for your attention!");
-                scanner.close();
-            }
+            case EXIT -> System.out.println("Thank you for your attention!");
             default -> System.out.println("Try again please!");
         }
+        scanner.close();
     }
 }
