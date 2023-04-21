@@ -11,13 +11,13 @@ public final class PrimeGame {
     private static final String RULE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.\n";
 
     public static void start() {
-        String[][] questions = generateQuestions(Engine.ROUNDS_COUNT);
+        String[][] questions = generateQuestions();
         Engine.startGame(RULE, questions);
     }
-    private static String[][] generateQuestions(int roundsCount) {
-        String[][] questions = new String[roundsCount][COLUMNS_COUNT];
+    private static String[][] generateQuestions() {
+        String[][] questions = new String[Engine.ROUNDS_COUNT][COLUMNS_COUNT];
 
-        for (int i = 0; i < roundsCount; i++) {
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int generatedNumber = generateNumber();
             questions[i][QUESTION_INDEX] = String.format("%d", generatedNumber);
             questions[i][ANSWER_INDEX] = isPrime(generatedNumber) ? "yes" : "no";
@@ -30,18 +30,18 @@ public final class PrimeGame {
     }
 
     private static boolean isPrime(int inputNumber) {
-        boolean isItPrime = true;
+        boolean isPrime = true;
 
         if (inputNumber <= 1) {
-            isItPrime = false;
+            isPrime = false;
         } else {
             for (int i = 2; i <= inputNumber / 2; i++) {
                 if ((inputNumber % i) == 0) {
-                    isItPrime = false;
+                    isPrime = false;
                     break;
                 }
             }
         }
-        return isItPrime;
+        return isPrime;
     }
 }

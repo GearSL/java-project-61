@@ -11,13 +11,13 @@ public final class EvenGame {
     private static final String RULE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void start() {
-        String[][] questions = generateQuestions(Engine.ROUNDS_COUNT);
+        String[][] questions = generateQuestions();
         Engine.startGame(RULE, questions);
     }
 
-    private static String[][] generateQuestions(int roundsCount) {
-        String[][] questions = new String[roundsCount][COLUMNS_COUNT];
-        for (int i = 0; i < roundsCount; i++) {
+    private static String[][] generateQuestions() {
+        String[][] questions = new String[Engine.ROUNDS_COUNT][COLUMNS_COUNT];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int generatedNumber = generateNumber();
             questions[i][QUESTION_INDEX] = String.format("%d", generatedNumber);
             questions[i][ANSWER_INDEX] = isEven(generatedNumber) ? "yes" : "no";

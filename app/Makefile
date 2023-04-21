@@ -3,7 +3,7 @@ run: clean build #Clean, build and start
 clean:
 	./gradlew clean
 
-build:
+build: clean
 	./gradlew installDist
 
 .PHONY: run

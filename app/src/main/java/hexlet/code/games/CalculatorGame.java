@@ -12,15 +12,15 @@ public final class CalculatorGame {
     private static final char[] OPERATIONS = {'+', '-', '*'};
 
     public static void start() {
-        String[][] questions = generateQuestions(Engine.ROUNDS_COUNT);
+        String[][] questions = generateQuestions();
         Engine.startGame(RULE, questions);
     }
-    private static String[][] generateQuestions(int roundsCount) {
-        String[][] questions = new String[roundsCount][COLUMNS_COUNT];
+    private static String[][] generateQuestions() {
+        String[][] questions = new String[Engine.ROUNDS_COUNT][COLUMNS_COUNT];
 
-        for (int i = 0; i < roundsCount; i++) {
-            int operandA = generateNumber();
-            int operandB = generateNumber();
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            int operandA = Utils.generateNumber(1, MAX_NUMBER_GENERATOR);
+            int operandB = Utils.generateNumber(1, MAX_NUMBER_GENERATOR);
             char operation = getOperation();
 
             questions[i][QUESTION_INDEX] = String.format("%d %s %d", operandA, operation, operandB);
@@ -37,10 +37,6 @@ public final class CalculatorGame {
             default -> throw new IllegalStateException("Unexpected value: " + operation);
         };
         return Integer.toString(correctAnswer);
-    }
-
-    private static int generateNumber() {
-        return Utils.generateNumber(1, MAX_NUMBER_GENERATOR);
     }
 
     private static char getOperation() {
